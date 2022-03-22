@@ -5,7 +5,8 @@ import json
 import pytest
 import jsonpath
 
-# untuk ngerun pytest, harus lwat terminal dan ketik 'pytest -v test_post_method.py'
+# untuk ngerun pytest, harus lwat terminal dan ketik 'pytest -v .\test_reqrest.py'
+# untuk ngerun pytest dan reporting html, harus lwat terminal dan ketik 'pytest .\test_reqrest.py -v --html=report.html'
 def test_post():
     url='https://reqres.in/api/users'
     s = requests.session()
@@ -90,6 +91,8 @@ def test_put():
     response = requests.patch(url)
     code_response = response.status_code
     assert code_response == 200
+
+
     
 
 
